@@ -1,6 +1,8 @@
 import pytest
+from os import path
 from selene import browser
 
+RES_DIR = path.abspath(path.join(path.dirname(__file__), 'resources'))
 
 @pytest.fixture(scope='function', autouse=True)
 def chrome_browser():
